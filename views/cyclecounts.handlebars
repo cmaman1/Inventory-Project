@@ -1,0 +1,18 @@
+<button id='add-file-button' class='display-button'>CARGAR ARCHIVO</button>
+
+<div class='invisible' id='upload-box'>
+    <form method="post" action="/conteos" enctype="multipart/form-data">
+        <label for='filename'>Nombre de archivo:</label>
+        <input type='text' name='filename'>
+        <input type='file'>
+        <br />
+        <input type="submit" value="Subir">
+    </form>
+</div>
+
+<table>
+    <thead>
+        <th>CONTEO N°</th>
+        <th>Fecha</th>
+    </thead>
+</table>

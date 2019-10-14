@@ -1,0 +1,26 @@
+[
+    {
+        "_id": {
+            "$oid": "5d9f7f51ae56490cc48eb290"
+        },
+        "name": "Aldana",
+        "lastname": "Mamani",
+        "username": "amamani",
+        "mail": "macarenamamanic@gmail.com",
+        "password": "asd",
+        "editar": true,
+        "administrar": false
+    },
+    {
+        "_id": {
+            "$oid": "5d9cad19cfc41228105f66f7"
+        },
+        "name": "Carolina",
+        "lastname": "Mamani",
+        "username": "csmaman1",
+        "mail": "mamaniccarolina@gmail.com",
+        "password": "csmc3256",
+        "editar": true,
+        "administrar": true
+    }
+]

@@ -1,0 +1,32 @@
+<button class='display-button'><a href='/registrar' style="color:white">REGISTRAR NUEVO USUARIO</a></button>
+
+{{#if listaUsuarios.length}}
+
+<h3 style='margin-bottom: 20px'>{{listaUsuarios.length}} usuarios registrados.</h1>
+
+<table class='usuarios'>
+    <thead>
+        <th>Usuario</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Mail</th>
+        <th>Opciones</th>
+    </thead>
+    <tbody>
+    {{#each listaUsuarios}}
+    <tr>
+        <td>{{this.username}}</td>
+        <td>{{this.name}}</td>
+        <td>{{this.lastname}}</td>
+        <td>{{this.mail}}</td>
+        <td><button>Editar</button><button>Borrar</button></td>
+    </tr>
+    {{/each}}
+    </tbody>
+</table>
+
+{{else}}
+
+<h3>No hay usuarios registrados.</h1>
+
+{{/if}}

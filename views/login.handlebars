@@ -1,0 +1,20 @@
+<div class="loginBox wrapper">
+    <h3>INICIAR SESIÓN</h2>
+        <hr />
+        <img src="icon_login.png">
+        {{#if mensaje}}
+        <p class="{{tipo}}">{{mensaje}}</p>
+        {{else}}
+        <p class="mensaje">-</p>
+        {{/if}}
+        <br />
+        <form method="post" action="/login">
+            <label for="usuario">Usuario </label>
+            <input type="text" name="user" id="user">
+            <br /> <br />
+            <label for="contraseña">Contraseña </label>
+            <input type="password" name="password" id="password">
+            <br /> <br />
+            <input type="submit" value="Log in" id="login"></input>
+        </form>
+</div>
