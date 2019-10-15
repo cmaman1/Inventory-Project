@@ -1,0 +1,27 @@
+{
+  "name": "inventory-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "csvjson": "^5.1.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-path": "^0.3.8",
+    "express-session": "^1.17.0",
+    "mongodb": "^3.3.2",
+    "multer": "^1.4.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/csmamani"
+  },
+  "author": "Carolina Mamani",
+  "license": "ISC"
+}

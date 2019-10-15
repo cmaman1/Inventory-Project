@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.content{
+    margin-left: 50px;
+}
+
+header {
+    width: 100%;
+    overflow: hidden;
+    background: #252932;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+header .logo {
+    color: #f2f2f2;
+    font-size: 30px;
+    line-height: 100px;
+    float: left;
+    margin-left: 50px;
+}
+
+header nav {
+    float: right;
+    line-height: 100px;
+    margin-right: 50px;
+}
+
+header nav a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 15px;
+    font-weight: bold;
+    transition: ease;
+}
+
+header nav a:hover {
+    background: rgb(63, 63, 82);
+}
+
+h2 {
+    color: black;
+    font-size: xx-large;
+    margin-bottom: 20px;
+}
+
+.loginBox {
+    border-style: initial;
+    text-align: center;
+    background-color: white;
+    position: absolute;
+    margin-top: -100px;
+    top: 55%;
+    left: 38%;
+    margin-left: -100px;
+    width: 550px;
+    height: 300px;
+    border: 1px dotted gray;
+}
+
+footer {
+    color: black;
+    position: absolute;
+    top: 95%;
+    left: 88%;
+    border: 1.1px dashed gray;
+    background-color: white;
+    opacity: 0.8;
+}
+
+.mensaje {
+    color: white;
+    padding: 4px;
+}
+
+.mensaje-error {
+    color: maroon;
+}
+
+.mensaje-exito {
+    color: darkgreen;
+}
+
+.invisible {
+    display: none;
+}
+
+.upload-box {
+    display: unset;
+}
+
+.upload-box form {
+    background-color: white;
+    text-align: left;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.display-button {
+    background-color: grey;
+    color: white;
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 30px;
+}
+
+.usuarios {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 100px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.usuarios td {
+    border: 1px solid darkslategrey;
+    padding: 8px;
+    color: #00213e;
+}
+
+.usuarios th {
+    border: 1px solid darkslategrey;
+    padding: 8px;
+}
+
+.formularioRegistro {
+    font-size: 15px;
+    margin-bottom: 30px;
+    width: 20%;
+    max-width: 1000px;
+}
+
+.reports-table{
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.reports-table td {
+    border: 1px solid darkslategrey;
+    padding: 8px;
+    color: #00213e;
+}
+
+.reports-table th {
+    border: 1px solid darkslategrey;
+    padding: 8px;
+}
+
+th {
+    background-color: #252932;
+    color: white;
+}

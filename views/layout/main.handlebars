@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>{{title}}</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">INVENTORY EVOLUTION CONTROL</h1>
+        <nav>
+            {{#if nombre}}
+            <span class='user-bar' id='user-bar'>{{nombre}}
+                <a href="/home">INICIO</a>
+                {{#if puedeEditar}}
+                <a href="/conteos">CONTEOS</a>
+                {{/if}}
+                {{#if puedeAdministrar}}
+                <a href="/gestionar">GESTIONAR USUARIOS</a>
+                {{/if}}
+                <a href="/logout">LOGOUT</a>
+            </span>
+            {{/if}}
+        </nav>
+    </header>
+    <div class="content">
+    {{#if header}}
+    <h2>{{header}}</h2>
+    {{/if}}
+    {{{body}}}
+    </div>
+    <div>
+        <footer><strong>®Carolina Mamani</strong></footer>
+    </div>
+    <script>
+
+        var botonCargar = document.getElementById('add-file-button');
+        var formularioCargaArchivos = document.getElementById('upload-box');
+
+        botonCargar.addEventListener('click', () => {
+            formularioCargaArchivos.classList.toggle('upload-box');
+        });
+
+
+    </script>
+</body>
+
+</html>
