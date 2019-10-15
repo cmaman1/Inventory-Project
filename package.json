@@ -8,11 +8,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "express-path": "^0.3.8",
-<<<<<<< HEAD
-    "express-session": "^1.17.0",
-=======
     "express-session": "^1.16.2",
->>>>>>> 61d7fb5d99b3a5cf0ccfc16c53bf4decf3e8c4ce
     "mongodb": "^3.3.2",
     "multer": "^1.4.2",
     "path": "^0.12.7"
