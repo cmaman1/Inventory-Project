@@ -15,7 +15,6 @@ const readFile = require('fs').readFile;
 const port = 4000;
 
 
-
 app.engine('handlebars', expressHandlebars({
     defaultLayout: 'main',
     layoutsDir: path.join(__dirname, 'views/layout')
@@ -308,8 +307,6 @@ app.get('/gestionar', (req, res) => {
     }
 });
 
-//////PROBANDO SUBIR ARCHIVOS////////
-
 
 app.post('/conteos', upload.single('file'), (req, res) => {
 
@@ -322,10 +319,8 @@ app.post('/conteos', upload.single('file'), (req, res) => {
         MongoClient.connect(dbURL, dbConfig, (err, client) => {
             if (!err) {
                 const colFiles = client.db(dbName).collection("files");
-                const colResults = client.db(dbName).collection("results");
 
                 colFiles.insertOne({ name: req.file.filename.substr(0, 9), file: req.file.filename, path: req.file.path.substr(63, 20) });
-
 
                 colFiles.find().toArray((err, files) => {
                     client.close();
@@ -357,8 +352,6 @@ app.post('/conteos', upload.single('file'), (req, res) => {
 
 });
 
-//////////////////////////////
-
 
 app.get('/logout', (req, res) => {
     console.log("GET /logout");
@@ -372,6 +365,7 @@ app.listen(port, () => {
 });
 
 
+//////verifica si existe el usuario y si la contraseña es correcta, devuelve un dato booleano //////
 function checkUser(usr, pwd, callback) {
     MongoClient.connect(dbURL, dbConfig, (err, client) => {
         if (!err) {
@@ -393,6 +387,7 @@ function checkUser(usr, pwd, callback) {
 }
 
 
+///// Verifica si el usuario cuya sesion esta iniciada tiene permisos de Administrador /////
 function checkUserAdmin(usr, callback) {
     MongoClient.connect(dbURL, dbConfig, (err, client) => {
         if (!err) {
@@ -412,6 +407,7 @@ function checkUserAdmin(usr, callback) {
 }
 
 
+///// Verifica si el usuario cuya sesion esta iniciada tiene permisos de Edicion /////
 function checkUserEdit(usr, callback) {
     MongoClient.connect(dbURL, dbConfig, (err, client) => {
         if (!err) {
@@ -431,6 +427,7 @@ function checkUserEdit(usr, callback) {
 }
 
 
+////// Guarda datos de nuevo usuario en la base de Datos //////
 function registerUser(name, lastname, usr, mail, pwd, edit, admin, callback) {
     MongoClient.connect(dbURL, dbConfig, (err, client) => {
         if (!err) {
@@ -455,8 +452,8 @@ function registerUser(name, lastname, usr, mail, pwd, edit, admin, callback) {
 }
 
 
+////// Convierte archivos CSV a JSON para despues guardarlos en la base de datos //////
 function importResults(csv) {
-
     readFile(csv, 'utf-8', (err, fileContent) => {
         if (err) {
             console.log(err);
@@ -473,6 +470,8 @@ function importResults(csv) {
     });
 }
 
+
+////// Consulta en la base de datos todos los resultados ya cargados //////
 function searchResults(callback) {
     MongoClient.connect(dbURL, dbConfig, (err, client) => {
         const colResults = client.db(dbName).collection("results");
