@@ -6,7 +6,7 @@ Entre sus principales funcionalidades esta el registro de usuarios, con distinto
 ### Usuarios con permisos de Visualizacion (basico)
 Son los usuarios que al iniciar sesion, solo tienen acceso a la pagina principal de Reportes.
 
-#### Usuarios con permisos de Edicion (intermedio)
+### Usuarios con permisos de Edicion (intermedio)
 Son aquellos que pueden, ademas de visualizar reportes, cargar informacion a la base de datos de inventarios.
 
 ### Usuarios con permisos de Administarcion (alto)
