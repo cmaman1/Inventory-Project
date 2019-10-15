@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <table class='reports-table'>
     <thead>
         <th>FECHA</th>
@@ -23,4 +24,31 @@
         </tr>
         {{/each}}
     </tbody>
+=======
+<table class='reports-table'>
+    <thead>
+        <th>FECHA</th>
+        <th>ARTICULOS</th>
+        <th>UNIDADES POR SISTEMA</th>
+        <th>UNIDADES FISICAS</th>
+        <th>DIFERENCIAS NETAS</th>
+        <th>% DE EFECTIVIDAD SOBRE NETAS</th>
+        <th>DIFERENCIAS ABSOLUTAS</th>
+        <th>% DE EFECTIVIDAD SOBRE ABSOLUTAS</th>
+    </thead>
+    <tbody>
+        {{#each listaResultados}}
+        <tr>
+            <td>{{this.Fecha}}</td>
+            <td>{{this.Articulo}}</td>
+            <td>{{this.Logico}}</td>
+            <td>{{this.Fisico}}</td>
+            <td>{{this.Diferencia}}</td>
+            <td>{{"this.Fisico / this.Logico * 100"}}%</td>
+            <td>ABS</td>
+            <td>% ABS</td>
+        </tr>
+        {{/each}}
+    </tbody>
+>>>>>>> 61d7fb5d99b3a5cf0ccfc16c53bf4decf3e8c4ce
 </table>
