@@ -1,7 +1,7 @@
 # Proyecto de control de inventarios
 
 Este proyecto esta hecho para ayudar a una mejor gestion de los resultados de los inventarios de cualquier negocio.
-Entre sus principales funcionalidades esta el registro de usuarios, con distintos niveles de permisos (Administrar, Editar, Visualizar).
+Entre sus principales funcionalidades esta el registro de usuarios, con distintos niveles de permisos (Administrar Usuarios, Cargar Archivos, Visualizar Informacion). La carga de informacion en archivos CSV para ser guardado en una base de datos y en el servidor.
 
 ### Usuarios con permisos de Visualizacion (basico)
 Son los usuarios que al iniciar sesion, solo tienen acceso a la pagina principal de Reportes.
