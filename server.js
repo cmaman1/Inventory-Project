@@ -55,13 +55,13 @@ app.post('/conteos', upload.single('file') ,(req, res) => {
     if (req.session.user) {
         checkUserEdit(req.session.user, result => {
             if (result) {
-                res.render('cyclecounts', { title: 'Conteos', header: 'Conteos', nombre: req.session.user, puedeEditar: true, puedeAdministrar: false, archivos: listaArchivos });
+                res.render('cyclecounts', { title: 'Conteos', header: 'Conteos', nombre: req.session.user, puedeEditar: true, puedeAdministrar: false });
             } else {
                 checkUserAdmin(req.session.user, result => {
                     if (result) {
-                        res.render('cyclecounts', { title: 'Conteos', header: 'Conteos', nombre: req.session.user, puedeEditar: true, puedeAdministrar: true, archivos: listaArchivos });
+                        res.render('cyclecounts', { title: 'Conteos', header: 'Conteos', nombre: req.session.user, puedeEditar: true, puedeAdministrar: true });
                     } else {
-                        res.render('cyclecounts', { title: 'Conteos', header: 'Conteos', nombre: req.session.user, puedeEditar: false, puedeAdministrar: false, archivos: listaArchivos });
+                        res.render('cyclecounts', { title: 'Conteos', header: 'Conteos', nombre: req.session.user, puedeEditar: false, puedeAdministrar: false });
                     }
                 });
             }
