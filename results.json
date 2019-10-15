@@ -1,0 +1,123 @@
+[
+    {
+        "_id": {
+            "$oid": "5da55999380f9a3404b93291"
+        },
+        "Conteonro": "C-01",
+        "Fecha": "1/9/2019",
+        "Articulo": "FOOTWEAR",
+        "Logico": "100",
+        "Fisico": "98",
+        "Diferencia": "-2"
+    },
+    {
+        "_id": {
+            "$oid": "5da55999380f9a3404b93292"
+        },
+        "Conteonro": "C-01",
+        "Fecha": "1/9/2019",
+        "Articulo": "FOOTWEAR",
+        "Logico": "153",
+        "Fisico": "255",
+        "Diferencia": "102"
+    },
+    {
+        "_id": {
+            "$oid": "5da55999380f9a3404b93293"
+        },
+        "Conteonro": "C-01",
+        "Fecha": "1/9/2019",
+        "Articulo": "FOOTWEAR",
+        "Logico": "461",
+        "Fisico": "510",
+        "Diferencia": "49"
+    },
+    {
+        "_id": {
+            "$oid": "5da55999380f9a3404b93294"
+        },
+        "Conteonro": "C-01",
+        "Fecha": "1/9/2019",
+        "Articulo": "EQUIPMENT",
+        "Logico": "153",
+        "Fisico": "200",
+        "Diferencia": "47"
+    },
+    {
+        "_id": {
+            "$oid": "5da55999380f9a3404b93295"
+        },
+        "Conteonro": "C-01",
+        "Fecha": "1/9/2019",
+        "Articulo": "EQUIPMENT",
+        "Logico": "100",
+        "Fisico": "110",
+        "Diferencia": "10"
+    },
+    {
+        "_id": {
+            "$oid": "5da55999380f9a3404b93296"
+        },
+        "Conteonro": "C-01",
+        "Fecha": "1/9/2019",
+        "Articulo": "EQUIPMENT",
+        "Logico": "103",
+        "Fisico": "100",
+        "Diferencia": "-3"
+    },
+    {
+        "_id": {
+            "$oid": "5da55999380f9a3404b93297"
+        },
+        "Conteonro": "C-01",
+        "Fecha": "1/9/2019",
+        "Articulo": "EQUIPMENT",
+        "Logico": "502",
+        "Fisico": "489",
+        "Diferencia": "-13"
+    },
+    {
+        "_id": {
+            "$oid": "5da55999380f9a3404b93298"
+        },
+        "Conteonro": "C-01",
+        "Fecha": "1/9/2019",
+        "Articulo": "APPAREL",
+        "Logico": "230",
+        "Fisico": "250",
+        "Diferencia": "20"
+    },
+    {
+        "_id": {
+            "$oid": "5da55999380f9a3404b93299"
+        },
+        "Conteonro": "C-01",
+        "Fecha": "1/9/2019",
+        "Articulo": "APPAREL",
+        "Logico": "123",
+        "Fisico": "120",
+        "Diferencia": "-3"
+    },
+    {
+        "_id": {
+            "$oid": "5da55999380f9a3404b9329a"
+        },
+        "Conteonro": "C-01",
+        "Fecha": "1/9/2019",
+        "Articulo": "APPAREL",
+        "Logico": "325",
+        "Fisico": "315",
+        "Diferencia": "-10"
+    },
+    {
+        "_id": {
+            "$oid": "5da55999380f9a3404b9329b"
+        },
+        "Conteonro": "C-01",
+        "Fecha": "1/9/2019",
+        "Articulo": "APPAREL",
+        "Logico": "452",
+        "Fisico": "450",
+        "Diferencia": "-2"
+    }
+]

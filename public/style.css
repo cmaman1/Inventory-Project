@@ -1,7 +1,11 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.content{
+    margin-left: 50px;
 }
 
 header {
@@ -69,14 +73,6 @@ h2 {
     border: 1px dotted gray;
 }
 
-
-/* button {
-    background-color: black;
-    border-radius: 3px 3px 3px 3px;
-    font-size: 12pt;
-    padding: 5px 10px;
-} */
-
 footer {
     color: black;
     position: absolute;
@@ -99,21 +95,6 @@ footer {
 .mensaje-exito {
     color: darkgreen;
 }
-
-
-/* .user-bar {
-    position: relative;
-    color: darkblue;
-} */
-
-
-/* .user-bar a {
-    padding: 2px 7px 2px 7px;
-    color: white;
-    background-color: darkblue;
-    border: 1px solid #ccc;
-    text-decoration: none;
-} */
 
 .invisible {
     display: none;
@@ -145,11 +126,15 @@ footer {
     max-width: 1000px;
 }
 
-.usuarios td,
-.usuarios th {
+.usuarios td {
     border: 1px solid darkslategrey;
     padding: 8px;
     color: #00213e;
+}
+
+.usuarios th {
+    border: 1px solid darkslategrey;
+    padding: 8px;
 }
 
 .formularioRegistro {
@@ -157,4 +142,28 @@ footer {
     margin-bottom: 30px;
     width: 20%;
     max-width: 1000px;
+}
+
+.reports-table{
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.reports-table td {
+    border: 1px solid darkslategrey;
+    padding: 8px;
+    color: #00213e;
+}
+
+.reports-table th {
+    border: 1px solid darkslategrey;
+    padding: 8px;
+}
+
+th {
+    background-color: #252932;
+    color: white;
 }
