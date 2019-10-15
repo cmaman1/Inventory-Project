@@ -11,29 +11,6 @@ const dbName = "proyectoinv";
 const app = express();
 const port = 4000;
 
-//////PROBANDO SUBIR ARCHIVOS////////
-
-const multer = require('multer');
-
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, 'files'));
-    },
-    filename: (req, file, cb) => {
-        cb(null, Date.now() + '-' + file.originalname);
-    }
-})
-
-const upload = multer({
-    storage: storage
-})
-
-app.post('/conteos', upload.single('file') ,(req, res) => {
-    console.log(req.file);
-    return res.send(req.file);
-});
-
-//////////////////////////////
 
 
 app.engine('handlebars', expressHandlebars({
@@ -54,7 +31,48 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+//////PROBANDO SUBIR ARCHIVOS////////
 
+const multer = require('multer');
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, path.join(__dirname, 'files'));
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.originalname);
+    }
+})
+
+const upload = multer({
+    storage: storage
+})
+
+app.post('/conteos', upload.single('file') ,(req, res) => {
+
+    console.log('POST /conteos');
+
+    if (req.session.user) {
+        checkUserEdit(req.session.user, result => {
+            if (result) {
+                res.render('cyclecounts', { title: 'Conteos', header: 'Conteos', nombre: req.session.user, puedeEditar: true, puedeAdministrar: false, archivos: listaArchivos });
+            } else {
+                checkUserAdmin(req.session.user, result => {
+                    if (result) {
+                        res.render('cyclecounts', { title: 'Conteos', header: 'Conteos', nombre: req.session.user, puedeEditar: true, puedeAdministrar: true, archivos: listaArchivos });
+                    } else {
+                        res.render('cyclecounts', { title: 'Conteos', header: 'Conteos', nombre: req.session.user, puedeEditar: false, puedeAdministrar: false, archivos: listaArchivos });
+                    }
+                });
+            }
+        });
+    } else {
+        res.render('login', { title: 'Iniciar sesión' });
+    }
+
+});
+
+//////////////////////////////
 
 
 app.get('/', (req, res) => {
@@ -315,22 +333,6 @@ app.get('/gestionar', (req, res) => {
 });
 
 
-app.post('/cargar', (req, res) => {
-    console.log('POST /cargar', req.query); //no estaria funcionando el req.body, ver
-    checkUserEdit(req.session.user, result => {
-        if (result) {
-            res.render('update-info', { title: 'Cargar', header: 'Cargar nuevo archivo', nombre: req.session.user, puedeEditar: true, puedeAdministrar: false });
-        } else {
-            checkUserAdmin(req.session.user, result => {
-                if (result) {
-                    res.render('update-info', { title: 'Cargar', header: 'Cargar nuevo archivo', nombre: req.session.user, puedeEditar: true, puedeAdministrar: true });
-                } else {
-                    res.render('update-info', { title: 'Cargar', header: 'Cargar nuevo archivo', nombre: req.session.user, puedeEditar: false, puedeAdministrar: false });
-                }
-            });
-        }
-    });
-});
 
 
 app.get('/logout', (req, res) => {
@@ -427,3 +429,28 @@ function registerUser(name, lastname, usr, mail, pwd, edit, admin, callback) {
         }
     });
 }
+
+function csvJSON(csv){
+
+    var lines=csv.split("\n");
+  
+    var result = [];
+  
+    var headers=lines[0].split(";");
+  
+    for(var i=1;i<lines.length;i++){
+  
+        var obj = {};
+        var currentline=lines[i].split(";");
+  
+        for(var j=0;j<headers.length;j++){
+            obj[headers[j]] = currentline[j];
+        }
+  
+        result.push(obj);
+  
+    }
+    
+    //return result; //JavaScript object
+    return JSON.stringify(result); //JSON
+  }
